@@ -15,7 +15,7 @@ public class PrototypeLicenzaRunner implements ApplicationRunner {
 	ObjectProvider<Licenza> licenzaObjectProvider;
 	
 	@Autowired
-	LicenzaCacciaRepo licenzaCacciaRepo;
+	LicenzaRepo licenzaRepo;
 	
 	
 	@Autowired
@@ -30,7 +30,7 @@ public class PrototypeLicenzaRunner implements ApplicationRunner {
 			
 			LicenzaCaccia licenza = (LicenzaCaccia) licenzaObjectProvider.getObject(); // prende un prototipo di oggetto
 			
-			licenzaCacciaRepo.save(licenza); //salva l'oggetto creato al interno del database
+			licenzaRepo.save(licenza); //salva l'oggetto creato al interno del database
 			
 			
 		}
