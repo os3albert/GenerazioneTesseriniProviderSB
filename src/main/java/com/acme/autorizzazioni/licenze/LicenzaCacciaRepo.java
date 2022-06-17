@@ -4,6 +4,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface LicenzaCacciaRepo extends PagingAndSortingRepository<LicenzaCaccia, Long> {
+public interface LicenzaCacciaRepo extends PagingAndSortingRepository<LicenzaAbstract, Long> {
 
 }
