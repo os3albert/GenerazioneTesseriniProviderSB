@@ -14,6 +14,9 @@ public class PrototypeLicenzaRunner implements ApplicationRunner {
 	@Qualifier("licenzaCaccia")
 	ObjectProvider<Licenza> licenzaObjectProvider;
 	
+	@Autowired
+	LicenzaCacciaRepo licenzaCacciaRepo;
+	
 	
 	@Autowired
 	@Qualifier("licenzaPesca")
@@ -25,8 +28,10 @@ public class PrototypeLicenzaRunner implements ApplicationRunner {
 
 		for (int i = 0; i < 30; i++) {
 			
-			Licenza licenza = licenzaObjectProvider.getObject();
-			System.out.println(licenza);
+			LicenzaCaccia licenza = (LicenzaCaccia) licenzaObjectProvider.getObject(); // prende un prototipo di oggetto
+			
+			licenzaCacciaRepo.save(licenza); //salva l'oggetto creato al interno del database
+			
 			
 		}
 		

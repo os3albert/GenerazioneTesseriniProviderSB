@@ -42,10 +42,10 @@ public abstract class PersonaAbstract implements Persona {
 	private String citta; 
 	
 	@ToString.Exclude
-	@OneToMany(targetEntity = TesserinoAbstract.class)
+	@OneToMany(targetEntity = TesserinoAbstract.class, mappedBy = "tesserini_persona")
 	private List<Tesserino> tesserinos;
 	
 	@ToString.Exclude
-	@OneToMany(targetEntity = LicenzaAbstract.class)
+	@OneToMany(targetEntity = LicenzaAbstract.class, mappedBy = "titolare")
 	private List<Licenza> licenzas;
 }

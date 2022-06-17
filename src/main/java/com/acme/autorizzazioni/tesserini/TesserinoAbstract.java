@@ -10,6 +10,8 @@ import javax.persistence.ManyToOne;
 
 import com.acme.autorizzazioni.licenze.Licenza;
 import com.acme.autorizzazioni.licenze.LicenzaAbstract;
+import com.acme.autorizzazioni.persone.Persona;
+import com.acme.autorizzazioni.persone.PersonaAbstract;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,5 +33,9 @@ public abstract class TesserinoAbstract implements Tesserino {
 	@ToString.Exclude
 	@ManyToOne(targetEntity = LicenzaAbstract.class)
 	private Licenza licenza;
+	
+	@ToString.Exclude
+	@ManyToOne(targetEntity = PersonaAbstract.class)
+	private Persona tesserini_persona;
 	
 }

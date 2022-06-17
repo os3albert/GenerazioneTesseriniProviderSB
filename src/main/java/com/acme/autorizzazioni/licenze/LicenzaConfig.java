@@ -24,6 +24,9 @@ public class LicenzaConfig {
 		licenza.setAtc(Faker.instance().bothify("???###??##??##"));
 		licenza.setNumeroDiSerie(Faker.instance().bothify("???###??##??##"));
 		licenza.setTipologiaPrede(faker.animal().name());
+		licenza.setAnnoDiScadenza(Faker.instance().number().numberBetween(2000, 2050));
+		licenza.setNumeroLicenza(faker.number().randomDigitNotZero());
+		
 		
 		return licenza;
 		
