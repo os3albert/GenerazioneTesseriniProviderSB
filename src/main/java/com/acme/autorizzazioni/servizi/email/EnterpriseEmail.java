@@ -18,5 +18,4 @@ public class EnterpriseEmail extends EmailAbstract {
 		super(id, toSender, message, subject); 
 		// TODO Auto-generated constructor stub
 	}
-
 }

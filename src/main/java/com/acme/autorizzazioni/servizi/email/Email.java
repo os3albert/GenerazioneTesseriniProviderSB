@@ -1,7 +1,7 @@
 package com.acme.autorizzazioni.servizi.email;
 
 public interface Email {
-	public void setTo(String to);
+	public void setToSender(String toSender);
 	public String getTo();
 	
 	public void setSubject(String subject);
