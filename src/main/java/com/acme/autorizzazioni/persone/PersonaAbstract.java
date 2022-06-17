@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import org.apache.commons.lang3.builder.ToStringExclude;
 
@@ -27,6 +28,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Table(name = "persona")
 public abstract class PersonaAbstract implements Persona {
 	
 	@Id

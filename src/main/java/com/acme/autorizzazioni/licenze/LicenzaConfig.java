@@ -13,7 +13,7 @@ public class LicenzaConfig {
 	
 	@Bean("licenzaCaccia")
 	@Scope("prototype")
-	public Licenza newLicenzaCaccia() {
+	public Licenza newLicenza() {
 		
 		Licenza licenza = new LicenzaCaccia();
 		licenza.setAnnoDiScadenza(Faker.instance().number().numberBetween(2000, 2050));
