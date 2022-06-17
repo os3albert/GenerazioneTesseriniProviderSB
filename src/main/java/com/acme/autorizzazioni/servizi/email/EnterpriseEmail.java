@@ -13,9 +13,12 @@ import lombok.EqualsAndHashCode;
 @Entity
 @Table(name = "enterprise_emails")
 public class EnterpriseEmail extends EmailAbstract {
-
+	
 	public EnterpriseEmail(long id, String toSender, String message, String subject) {
-		super(id, toSender, message, subject); 
+		super(id, toSender, message, subject);
 		// TODO Auto-generated constructor stub
 	}
+
+	
+	
 }

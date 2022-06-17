@@ -25,7 +25,7 @@ public class EmailService {
         EmailNotValidException {
         
         // se (l'email del destinatario non e' valida) lancia un eccezzione
-        if(!isEmailValid(mail.getTo())) {
+        if(!isEmailValid(mail.getToSender())) {
             throw new EmailNotValidException("Email non valida");
         }
         

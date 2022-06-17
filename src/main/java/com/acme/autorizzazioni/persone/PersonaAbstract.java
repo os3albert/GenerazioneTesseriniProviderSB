@@ -42,7 +42,7 @@ public abstract class PersonaAbstract implements Persona {
 	private String citta; 
 	
 	@ToString.Exclude
-	@OneToMany(targetEntity = TesserinoAbstract.class)
+	@OneToMany(targetEntity = TesserinoAbstract.class, mappedBy = "persona")
 	private List<Tesserino> tesserinos;
 	
 	@ToString.Exclude

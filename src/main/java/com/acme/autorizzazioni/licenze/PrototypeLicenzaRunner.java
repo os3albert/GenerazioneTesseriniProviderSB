@@ -13,13 +13,19 @@ public class PrototypeLicenzaRunner implements ApplicationRunner {
 	@Autowired
 	@Qualifier("licenzaCaccia")
 	ObjectProvider<Licenza> licenzaObjectProvider;
+	
+	
+	@Autowired
+	@Qualifier("licenzaPesca")
+	ObjectProvider<Licenza> licenzaPescaObjectProvider;
+	
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 
 		for (int i = 0; i < 30; i++) {
 			
-			Licenza licenza = licenzaObjectProvider.getObject();
+			Licenza licenza = (LicenzaCaccia) licenzaObjectProvider.getObject();
 			System.out.println(licenza);
 			
 		}
