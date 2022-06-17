@@ -23,7 +23,7 @@ public abstract class EmailAbstract implements Email {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
-	private String to;
+	private String toSender;
 	private String message;
 	private String subject;
 	
