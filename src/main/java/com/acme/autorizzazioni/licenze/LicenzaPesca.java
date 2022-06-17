@@ -17,11 +17,12 @@ public class LicenzaPesca extends LicenzaAbstract {
 	private String tipo;  
 	private String localita;
 	
-	public LicenzaPesca(long id, int numeroLicenza, Persona titolare, int annoDiScadenza, String tipo,
+	public LicenzaPesca(long id, int numeroLicenza, int annoDiScadenza, Persona titolare, String tipo,
 			String localita) {
-		super(id, numeroLicenza, titolare, annoDiScadenza);
+		super(id, numeroLicenza, annoDiScadenza, titolare);
 		this.tipo = tipo;
 		this.localita = localita;
 	}
+	
 
 }

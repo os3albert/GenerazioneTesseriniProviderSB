@@ -19,15 +19,14 @@ public class LicenzaCaccia extends LicenzaAbstract {
 	private String numeroDiSerie; 
 	private String tipologiaPrede;
 	
-	
-	public LicenzaCaccia(long id, int numeroLicenza, Persona titolare, int annoDiScadenza, long id2, String atc,
+	public LicenzaCaccia(long id, int numeroLicenza, int annoDiScadenza, Persona titolare, String atc,
 			String numeroDiSerie, String tipologiaPrede) {
-		super(id, numeroLicenza, titolare, annoDiScadenza);
-		id = id2;
+		super(id, numeroLicenza, annoDiScadenza, titolare);
 		this.atc = atc;
 		this.numeroDiSerie = numeroDiSerie;
 		this.tipologiaPrede = tipologiaPrede;
 	}
+	
 	
 	
 
