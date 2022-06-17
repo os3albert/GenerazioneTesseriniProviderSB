@@ -9,6 +9,7 @@ import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 
 import com.acme.autorizzazioni.licenze.Licenza;
+import com.acme.autorizzazioni.licenze.LicenzaAbstract;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,7 +29,7 @@ public abstract class TesserinoAbstract implements Tesserino {
 	private int annoValidita;
 	
 	@ToString.Exclude
-	@ManyToOne
+	@ManyToOne(targetEntity = LicenzaAbstract.class)
 	private Licenza licenza;
 	
 }

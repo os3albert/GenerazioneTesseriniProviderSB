@@ -1,6 +1,8 @@
 package com.acme.autorizzazioni.licenze;
 
 
+import javax.persistence.Entity;
+
 import com.acme.autorizzazioni.persone.Persona;
 
 import lombok.Data;
@@ -10,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @EqualsAndHashCode(callSuper=true)
 @NoArgsConstructor
+@Entity
 public class LicenzaPesca extends LicenzaAbstract {
 	private String tipo;  
 	private String localita;

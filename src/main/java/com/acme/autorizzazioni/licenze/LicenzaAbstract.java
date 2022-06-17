@@ -6,12 +6,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
 
 import com.acme.autorizzazioni.persone.Persona;
+import com.acme.autorizzazioni.persone.PersonaAbstract;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @NoArgsConstructor
@@ -23,8 +26,12 @@ public abstract class LicenzaAbstract implements Licenza {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
 	private int numeroLicenza;
-	private Persona titolare;
 	private int annoDiScadenza;
+	
+	@ToString.Exclude
+	@ManyToOne(targetEntity = PersonaAbstract.class)
+	private Persona titolare;
+	
 	@Override
 	public boolean isValid() {
 		return true;

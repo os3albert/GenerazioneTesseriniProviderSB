@@ -17,11 +17,13 @@ public class TesserinoConfiguration{
 	public Tesserino newTesserino(String tesserinoType) throws WrongTesserinoTypeException {
 		
 		if(tesserinoType.equals(CACCIA)) 
+			
 			return TesserinoCaccia.builder()
 								  .annoValidita(Faker.instance().number().numberBetween(2000, 2050))
 								  .build();
 		
 		else if (tesserinoType.equals(PESCA))
+			
 			return TesserinoPesca.builder()
 								 .annoValidita(Faker.instance().number().numberBetween(2000, 2050))
 								 .build();
