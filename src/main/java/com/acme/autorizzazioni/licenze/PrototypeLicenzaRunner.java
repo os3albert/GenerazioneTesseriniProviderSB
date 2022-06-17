@@ -25,7 +25,7 @@ public class PrototypeLicenzaRunner implements ApplicationRunner {
 
 		for (int i = 0; i < 30; i++) {
 			
-			Licenza licenza = (LicenzaCaccia) licenzaObjectProvider.getObject();
+			Licenza licenza = licenzaObjectProvider.getObject();
 			System.out.println(licenza);
 			
 		}
