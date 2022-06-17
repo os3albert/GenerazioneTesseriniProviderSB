@@ -21,7 +21,11 @@ public class TesserinoConfiguration{
 								  .annoValidita(Faker.instance().number().numberBetween(2000, 2050))
 								  .build();
 		
-		else if (tesserinoType.equals(PESCA)) return new TesserinoPesca();
+		else if (tesserinoType.equals(PESCA))
+			return TesserinoPesca.builder()
+								 .annoValidita(Faker.instance().number().numberBetween(2000, 2050))
+								 .build();
+		
 		else throw new WrongTesserinoTypeException("wrong tesserino type added");
 		
 	}
