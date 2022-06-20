@@ -1,5 +1,5 @@
 package com.acme.autorizzazioni.citta;
-//Ciao
+
 import java.util.List;
 
 import org.springframework.beans.BeanUtils;
