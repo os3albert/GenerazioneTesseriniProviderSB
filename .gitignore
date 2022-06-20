@@ -36,3 +36,5 @@ build/
 =======
 ./src/main/resources/application.properties
 >>>>>>> branch 'master' of https://github.com/os3albert/GenerazioneTesseriniProviderSB.git
+
+./src/main/resources/application.properties
