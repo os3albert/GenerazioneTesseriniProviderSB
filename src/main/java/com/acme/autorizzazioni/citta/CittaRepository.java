@@ -8,6 +8,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CittaRepository extends PagingAndSortingRepository<Citta, Long> {
-	
-
+    public List<Citta> findByIdBetween(long da, long a);
 }
